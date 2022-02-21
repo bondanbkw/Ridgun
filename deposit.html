@@ -42,7 +42,7 @@ var jumlah = getUrlVars("value");
     let myWallet = new LNPayWallet(walletAccessKey);
         myWallet.createInvoice(invoiceParams,function(result) {
         console.log(result);
-	document.write("{'id':'"+result.payment_request+"''}");
+	document.write("{'id':'"+result.payment_request+"'}");
         });
 
 </script>
