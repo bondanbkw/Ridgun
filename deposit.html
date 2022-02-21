@@ -3,7 +3,8 @@
     <script src="https://unpkg.com/lnpay-js@^0.1/dist/lnpay.min.js"></script>
 <body>
 
-
+<h6>Hello World!!!</h6>
+<p id="demo"></p>
 
 </body>
 
@@ -41,8 +42,8 @@ var jumlah = getUrlVars("value");
     let invoiceParams = {"num_satoshis":jumlah,"memo":"RGBOT"};
     let myWallet = new LNPayWallet(walletAccessKey);
         myWallet.createInvoice(invoiceParams,function(result) {
-        console.log(result);
-	document.write("{'id':'"+result.payment_request+"'}");
+        var text = result.payment_request;
+	document.getElementById("demo"). innerHTML = text;
         });
 
 </script>
